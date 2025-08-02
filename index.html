@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Human Motion Generation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/oni.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Human Motion Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="static/images/lichaowu.jpg" target="_blank">李朝武</a><sup>*</sup>,</span>
+                <!-- 暂时隐藏作者信息
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Yi-Hsiang Chien</a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                  </span>
+                  </div>
+                -->
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">DA LIAN University<br>2025</span>
+                    <!-- 暂时隐藏作者信息
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link 
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+                  -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">摘要</h2>
+        <div class="content has-text-justified">
+          <p>
+            文本驱动的人体运动生成旨在依据自然语言描述生成兼具生成语义一致性与自然连贯的运动序列。
+            当前主流方法在文本语义与运动序列的精准对齐及动作细节的精细化建模仍存在技术瓶颈。
+            针对这一挑战，本文提出一种融合局部与全局文本语义的生成框架。
+            该框架首先通过 TMIN 模块与 CLIP 模型分别提取不同粒度的文本语义表示，实现从细粒度词汇语义到粗粒度全局含义的全面捕捉；
+            随后引入 CrossDyT 动态交叉建模模块，构建局部文本语义与运动特征的动态关联机制，
+            同时结合全局自注意力机制与随机掩码策略，实现全局语义与动作序列的深度建模。
+            实验在 HumanML3D 与 KIT-ML 数据集上验证了方法的有效性，
+            尤其在文本-运动一致性（R-Precision）和（文本-运动匹配度）Matching Score 等指标上显著优于现有方法。
+            我们的方法为多模态语义建模与自然运动生成提供了新的思路。
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Image section with SVG -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <!-- 上方标题 -->
+      <h1 class="title is-3">Methodology</h1>
+
+      <!-- SVG 响应式显示 -->
+      <div style="max-width: 100%; display: flex; justify-content: center;">
+        <img src="static/images/mian.drawio.svg"
+             alt="Method Overview"
+             style="width: 100%; height: auto;"/>
+      </div>
+
+      <!-- 下方说明文字 -->
+      <h2 class="content has-text-justified" style="margin-top: 1.5rem;">
+        所提出的框架概述：（a）残差运动编码器（b）文本建模：输入的自然语言描述通过 TMIN 模块 和 CLIP 模型 提取局部与全局的文本表示，分别捕捉细粒度语义与整体上下文信息。
+        （c）交叉融合：局部文本表示与掩码后的动作序列输入 CrossDyT 模块，进行跨模态的动态融合建模；随后结合全局文本表示统一建模全局语义一致性。最终，通过解码器生成完整、语义一致的人体运动序列。
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- Experiment Section with Title and SVG -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- 主标题：居中 -->
+      <h1 class="title is-3 has-text-centered">Experiments</h1>
+
+      <!-- 副标题：下一行居左 -->
+      <h2 class="title is-4" style="margin-top: 0.5rem;">Quantitative Results:</h2>
+
+      <!-- 第一个图片 -->
+      <div style="max-width: 100%; display: flex; justify-content: center;margin-top: -1rem;">
+        <img src="static/images/Human.svg"
+            alt="HumanML3D 数据集上的实验结果"
+            style="width: 100%; height: auto;" />
+      </div>
+
+      <!-- 图片说明文字：居中 + 上边距 -->
+      <h2 class="subtitle is-5 has-text-centered" style="margin-top: -3rem;">
+        HumanML3D 数据集上的实验结果
+      </h2>
+
+      <!-- 第二个图片，去掉 margin-top 或设置为更小值 -->
+      <div style="max-width: 100%; display: flex; justify-content: center; margin-top: -1rem;">
+        <img src="static/images/kit.svg"
+            alt="KIT-ML 数据集上的实验结果"
+            style="width: 100%; height: auto;" />
+      </div>
+
+      <!-- 图片说明文字：居中 + 上边距 -->
+      <h2 class="subtitle is-5 has-text-centered" style="margin-top: -3rem;">
+        KIT-ML 数据集上的实验结果
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- Videos -->
+<section class="section">
+  <div class="container">
+    <h2 class="title is-4">Qualitative Results:</h2>
+
+    <!-- 分组 1 -->
+    <hr>
+    <h3 class="video-section-label has-text-centered">对比 1: 基础对比</h3>
+    <hr>
+
+    <div class="container has-text-centered">
+      <p class="prompt-text">
+        <strong>Prompt: </strong>A person lifis each knee towards the opposite elbow.
+      </p>
+    </div>
+    <div class="video-grid">
+      <div class="video-item">
+        <video src="static/videos/ours-1.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered"><span style="color: rgba(13, 13, 227, 0.898);">Ours</span></p>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/momask-1.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">momask</p>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/BAD-1.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">BAD</p>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/BAMM-1.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">BAMM</p>
+      </div>
+    </div>
+    
+    <div class="container has-text-centered">
+      <p class="prompt-text">
+        <strong>Prompt: </strong>the man walked forward, spun right on one foot and 
+        walked back to his original position.
+      </p>
+    </div>
+
+    <div class="video-grid">
+      <div class="video-item"><video src="static/videos/ours-2.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered"><span style="color: rgba(13, 13, 227, 0.898);">Ours</span></p>
+      </div>
+      <div class="video-item"><video src="static/videos/momask-2.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">momask</p>
+      </div>
+      <div class="video-item"><video src="static/videos/BAD-2.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">BAD</p>
+      </div>
+      <div class="video-item"><video src="static/videos/BAMM-2.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">BAMM</p>
+      </div>
+    </div>
+    
+    <!-- 分组 2 -->
+    <hr>
+    <h3 class="video-section-label has-text-centered">对比 2: 仅有细微单词修改</h3>
+    <hr>
+    <div class="container has-text-centered">
+      <p class="prompt-text">
+        <strong>Prompt: </strong>a person walks forward and is picking up his toolbox with his 
+        <span style="color: rgba(13, 13, 227, 0.898);">left(upper)</span>/<span style="color: rgb(197, 8, 8);">right(lower)</span> hand. 
+      </p>
+    </div>
+    
+    <div class="video-grid">
+      <div class="video-item"><video src="static/videos/ours-3.mp4" autoplay muted loop controls></video></div>
+      <div class="video-item"><video src="static/videos/momask-3.mp4" autoplay muted loop controls></video></div>
+      <div class="video-item"><video src="static/videos/BAD-3.mp4" autoplay muted loop controls></video></div>
+      <div class="video-item"><video src="static/videos/BAMM-3.mp4" autoplay muted loop controls></video></div>
+    </div>
+    
+    <div class="video-grid">
+      <div class="video-item"><video src="static/videos/ours-4.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered"><span style="color: rgba(13, 13, 227, 0.898);">Ours</span></p>
+      </div>
+      <div class="video-item"><video src="static/videos/momask-4.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">momask</p>
+      </div>
+      <div class="video-item"><video src="static/videos/BAD-4.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">BAD</p>
+      </div>
+      <div class="video-item"><video src="static/videos/BAMM-4.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">BAMM</p>
+      </div>
+    </div>
+    <div class="container has-text-centered">
+      <p class="prompt-text">
+        <strong>Prompt: </strong> a person steps forward and leans over; they grab a cup with their 
+        <span style="color: rgba(13, 13, 227, 0.898);">left(upper)</span>/<span style="color: rgb(197, 8, 8);">right(lower)</span> hand and 
+        drink it before putting it down and stepping back to their original position.
+      </p>
+    </div>
+    
+
+    <div class="video-grid">
+      <div class="video-item"><video src="static/videos/ours-5.mp4" autoplay muted loop controls></video></div>
+      <div class="video-item"><video src="static/videos/momask-5.mp4" autoplay muted loop controls></video></div>
+      <div class="video-item"><video src="static/videos/BAD-5.mp4" autoplay muted loop controls></video></div>
+      <div class="video-item"><video src="static/videos/BAMM-5.mp4" autoplay muted loop controls></video></div>
+    </div>
+
+    <div class="video-grid">
+      <div class="video-item"><video src="static/videos/ours-6.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered"><span style="color: rgba(13, 13, 227, 0.898);">Ours</span></p>
+      </div>
+      <div class="video-item"><video src="static/videos/momask-6.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">momask</p>
+      </div>
+      <div class="video-item"><video src="static/videos/BAD-6.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">BAD</p>
+      </div>
+      <div class="video-item"><video src="static/videos/BAMM-6.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">BAMM</p>
+      </div>
+    </div>
+
+    <!-- 分组 3 -->
+    <hr>
+    <h3 class="video-section-label has-text-centered">我们的方法的可视化</h3>
+    <hr>
+
+    <div class="video-grid">
+      <div class="video-item"><video src="static/videos/1.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">A person walks in a circle.</p>
+      </div>
+      <div class="video-item"><video src="static/videos/2.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">The man takes 4 steps backwards.</p>
+      </div>
+      <div class="video-item"><video src="static/videos/2-1.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">A person walks backwards then crawls forword.</p>
+      </div>
+      <div class="video-item"><video src="static/videos/4.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">A man picks up something and throw it away.</p>
+      </div>
+    </div>
+
+    <div class="video-grid">
+      <div class="video-item"><video src="static/videos/5.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">A man walk forward with both hands above head.</p>
+      </div>
+      <div class="video-item"><video src="static/videos/6.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">A person looks for something on the ground with right hand.</p>
+      </div>
+      <div class="video-item"><video src="static/videos/7.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">A person jumps on the spot and is pushed forward.</p>
+      </div>
+      <div class="video-item"><video src="static/videos/8.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">A perdon steps to the left sideways</p>
+      </div>
+    </div>
+
+    <div class="video-grid">
+      <div class="video-item"><video src="static/videos/9.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">A man stands for few seconds and picks up his arms and shakes them.</p>
+      </div>
+      <div class="video-item"><video src="static/videos/10.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">A person walks with a limp,their left leg get injured.</p>
+      </div>
+      <div class="video-item"><video src="static/videos/11.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">A person jumps up and them lands.</p>
+      </div>
+      <div class="video-item"><video src="static/videos/12.mp4" autoplay muted loop controls></video>
+        <p class="video-caption has-text-centered">A person performs a standing back kick.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 
+<section class="section">
+  <div class="container">
+    <h2 class="title is-4">Qualitative Results:</h2>
+
+    <div class="video-grid">
+      
+      <div class="video-item">
+        <video src="static/videos/ours-1.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/momask-1.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/BAD-1.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/BAMM-1.mp4" autoplay muted loop controls></video>
+      </div>
+      
+      <div class="video-item">
+        <video src="static/videos/ours-2.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/momask-2.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/BAD-2.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/BAMM-2.mp4" autoplay muted loop controls></video>
+      </div>
+      
+      <div class="video-item">
+        <video src="static/videos/ours-3.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/momask-3.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/BAD-3.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/BAMM-3.mp4" autoplay muted loop controls></video>
+      </div>
+      
+      <div class="video-item">
+        <video src="static/videos/ours-4.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/momask-4.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/BAD-4.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/BAMM-4.mp4" autoplay muted loop controls></video>
+      </div>
+      
+      <div class="video-item">
+        <video src="static/videos/ours-5.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/momask-5.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/BAD-5.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/BAMM-5.mp4" autoplay muted loop controls></video>
+      </div>
+      
+      <div class="video-item">
+        <video src="static/videos/ours-6.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/momask-6.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/BAD-6.mp4" autoplay muted loop controls></video>
+      </div>
+      <div class="video-item">
+        <video src="static/videos/BAMM-6.mp4" autoplay muted loop controls></video>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- Image carousel
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          First image description.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2>
+      </div>
+      <div class="item">
+        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+         Third image description.
+       </h2>
+     </div>
+     <div class="item">
+      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+-->
+
+<!-- Youtube video
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- Video carousel
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/carousel1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <source src="static/videos/carousel2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">
+            <source src="static/videos/carousel3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- Paper poster
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>
+-->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>BibTex Code Here</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
